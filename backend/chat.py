@@ -50,7 +50,7 @@ def gjej_pergjigje_faq(mesazhi):
         mesazhi (str): Pyetja e përdoruesit
         
     Returns:
-        str or None: Përgjigja nëse gjendet, None nëse jo
+        str or None: Përgjigja nëse gjendet, None nese jo
     """
     # Merr të gjitha FAQs nga MongoDB
     faqs = list(questions_collection.find({}, {"_id": 0}))
