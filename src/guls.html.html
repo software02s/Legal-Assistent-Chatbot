@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gülsüm'e Sonsuz Aşk 💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+      background: linear-gradient(145deg, #2c003e, #4b005c);
+      font-family: 'Dancing Script', cursive;
+      color: white;
+      animation: bgPulse 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgPulse {
+      0% { background: linear-gradient(145deg, #2c003e, #4b005c); }
+      100% { background: linear-gradient(145deg, #3b0050, #6a0078); }
+    }
+
+    .message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+      padding: 40px;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 700px;
+      background: linear-gradient(135deg, #fff0ff, #ffe3f5);
+      border-left: 6px solid #ff8be6;
+      box-shadow: 0 0 30px #ff80ab;
+      color: #6b2e7a;
+      line-height: 1.8em;
+      font-size: 1.6em;
+    }
+
+    .message h1 {
+      font-size: 2.5em;
+      color: #ffccff;
+      text-shadow: 2px 2px 8px #e91e63;
+      margin: 0.3em 0;
+    }
+
+    .music-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 3;
+      background: #ffebf0;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 25px;
+      color: #d81b60;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 0 12px #ff4081;
+    }
+
+    .float {
+      position: fixed;
+      bottom: -30px;
+      font-size: 24px;
+      animation: floatUp 8s ease-in forwards;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh);
+        opacity: 0;
+      }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="music-btn" onclick="toggleMusic()">🎵 Müzik Aç/Kapat</button>
+  <audio id="bgMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="message">
+    <h1>🌸 Sevgilim Gülsüm 🌸</h1>
+    <h1>Seni Sonsuz Seviyorum 💖</h1>
+    <p>
+      Bu sayfa, kalbimden çıkan en içten duygularla senin için hazırlandı.<br>
+      Her yıldız, her çiçek, her kalp...<br>
+      Hepsi sana olan sevgimin bir yansıması. 💫<br><br>
+      💌 Bu defterin her satırı senin adını yazıyor...
+    </p>
+  </div>
+
+  <script>
+    function toggleMusic() {
+      const music = document.getElementById("bgMusic");
+      music.paused ? music.play() : music.pause();
+    }
+
+    const emojis = ['💖','💕','💘','💗','🌷','🌸','💞','💓'];
+
+    function createFloat() {
+      const float = document.createElement('div');
+      float.classList.add('float');
+      float.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      const size = Math.random() * 25 + 20;
+      float.style.fontSize = `${size}px`;
+      float.style.left = `${Math.random() * window.innerWidth}px`;
+      float.style.opacity = Math.random() * 0.8 + 0.2;
+      document.body.appendChild(float);
+      setTimeout(() => float.remove(), 9000);
+    }
+
+    setInterval(() => {
+      for (let i = 0; i < 10; i++) createFloat();
+    }, 100);
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+ _id: 205,
+    questions: [
+      "si mbyllet biznesi",
+      "dua te mbyll biznesin tim",
+      "procedura e çregjistrimit",
+      "çregjistrimi ne qkb",
+      "mbyllje biznesi qkb",
+      "dalja nga tregu",
+      "mbyllje aktiviteti",
+      "cfare dokumentesh duhen per mbyllje biznesi",
+      "si perfundon nje biznes",
+      "mbyllja nga tatimet",
+      "si e mbyll subjektin",
+      "a ka kosto per mbylljen e biznesit",
+      "a njoftoj tatimet kur mbyll biznesin"
+    ],
+    answer: "Për të mbyllur një biznes, duhet të aplikosh në QKB për çregjistrim dhe më pas të bësh mbylljen në Tatime. Duhet të paguhen të gjitha detyrimet e prapambetura përpara mbylljes përfundimtare.\n\nBurimi: Ligji Nr. 9723/2007 për Regjistrimin në QKB"
+
+
+    
+{
+  acknowledged: true,
+  insertedId: 301
+}
+db.questions.insertOne({
+  _id: 301,
+  question: [
+    "si hap biznes",
+    "si behet regjistrimi i biznesit",
+    "si regjistroj biznesin tim",
+    "procedura e regjistrimit te biznesit",
+    "dokumentat per regjistrim biznesi",
+    "ku behet regjistrimi i biznesit",
+    "cfare dokumentesh duhen per te hapur biznes",
+    "si behet hapja e nje firme",
+    "si hap nje biznes i vogel",
+    "si behet regjistrimi ne qkb",
+    "a duhet regjistruar biznesi",
+    "si regjistrohem ne qkb",
+    "procedurat per regjistrim biznesi",
+    "si behet regjistrimi online i biznesit"
+  ],
+  answer: "Hapja e një biznesi të vogël bëhet nëpërmjet Qendrës Kombëtare të Biznesit (QKB). Procedura kryhet online ose fizikisht me dorëzim dokumentesh.\n\nDokumentat kryesore që duhen janë: formulari i aplikimit, kopja e mjetit të identifikimit, vendimi për zgjedhjen e formës juridike dhe adresa e biznesit.\n\nPasi dorëzohen dokumentet, QKB regjistron subjektin dhe i jep NIPT-in.\n\nBurimi: Ligji Nr. 9723/2007 për Qendrën Kombëtare të Biznesit"
+});
